@@ -9,8 +9,12 @@ export class Equipo implements ICompetidor{
         this.nombre = nombre;
     }
 
+    get cantidad():number{
+        return this.jugadores.length;
+    }
+
     agregarJugador(jugador: Jugador): void{
-        const existe = this.jugadores.some(j => j.id === jugador.id);
+        const existe = this.jugadores.some(jug => jug.id === jugador.id);
         if (existe){
             console.log(`El jugador con el ID ${jugador.id} ya existe`)
         }
@@ -18,14 +22,10 @@ export class Equipo implements ICompetidor{
     }
 
     listarIntegrantes(): string[]{
-        console.log(`Integrantes del equipo: ${this.nombre}`)
+        return this.jugadores.map(jug => jug.toString());
     }
 
-    toString():void{
-
-    }
-
-    get cantidad():number{
-        return this.jugadores.length;
+    toString():string{
+        return `Equipo "${this.nombre}" || Candidad de jugadores: ${this.cantidad}`;
     }
 }

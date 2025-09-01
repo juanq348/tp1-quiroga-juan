@@ -13,7 +13,7 @@ export class Jugador implements IIdentificable{
         this.posicion = posicion;
     }
 
-    toString(): void{
-        console.log(`Nombre: ${this.nombre} || Edad: ${this.edad} || Posicion: ${this.posicion}`) ;
+    toString(): string{
+        return `Nombre: ${this.nombre} || Edad: ${this.edad} || ${this.posicion ? "" + this.posicion : ""}`;
     }
 }
