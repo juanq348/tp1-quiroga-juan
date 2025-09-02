@@ -1,12 +1,12 @@
 import type { IIdentificable } from "../interfaces/IIdentificable";
 
 export class Jugador implements IIdentificable{
-    readonly id : number;
+    readonly id : string;
     nombre : string;
     edad: number;
     posicion?: string;
 
-    constructor(id : number, nombre : string, edad: number, posicion?:string){
+    constructor(id : string, nombre : string, edad: number, posicion?:string){
         this.id = id;
         this.nombre = nombre;
         this.edad = edad;

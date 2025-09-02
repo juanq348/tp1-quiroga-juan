@@ -1,11 +1,11 @@
 import { Partido } from "./Partido";
 
 export class Torneo{
-    readonly id : number;
+    readonly id : string;
     nombre : string;
     private partidos : Partido[] = [];
 
-    constructor(id : number, nombre : string){
+    constructor(id : string, nombre : string){
         this.id = id;
         this.nombre = nombre;
     }
@@ -23,7 +23,7 @@ export class Torneo{
         return this.partidos.map(juego => juego.toString());
     }
 
-    buscarPartidos(id:number) : Partido | undefined{
+    buscarPartidos(id:string) : Partido | undefined{
         return this.partidos.find(juego => juego.id === id);
     }
 }

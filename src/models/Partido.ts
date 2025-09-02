@@ -3,13 +3,13 @@ import { Deporte } from "./Deporte";
 import { Resultado } from "./Resultado";
 
 export class Partido { 
-    readonly id : number;
+    readonly id : string;
     readonly local : Equipo;
     readonly visitante : Equipo;
     readonly deporte : Deporte;
     private _resultado? : Resultado;
 
-    constructor(id : number, local : Equipo, visitante : Equipo , deporte : Deporte){
+    constructor(id : string, local : Equipo, visitante : Equipo , deporte : Deporte){
     if(local === visitante){
         throw new Error(`El equipo local no puede ser el mismo que el visitante`)
     }

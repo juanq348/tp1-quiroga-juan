@@ -1,3 +1,3 @@
 export interface IIdentificable {
-    readonly id : number;
+    readonly id : string;
 }
